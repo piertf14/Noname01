@@ -36,4 +36,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/example.htm", method = RequestMethod.GET)
+	public String example01(Locale locale, Model model){
+		model.addAttribute("mensaje", "Hello world!");
+		return "example";
+	}
+	
 }
